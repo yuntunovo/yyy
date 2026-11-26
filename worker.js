@@ -37,7 +37,7 @@ export default {
   // 2. 定时任务 (日常运行版)
   // ==========================================
   async scheduled(event, env, ctx) {
-    const DEFAULT_NUMBER = '17879807573';
+    const DEFAULT_NUMBER = '10000000000';
     let workflow = '';
     let taskName = '';
     let inputs = {};
@@ -116,7 +116,7 @@ export default {
 // 通用函数 (向 GitHub 发送指令)
 // ==========================================
 async function triggerGitHub(env, workflow, taskName, inputs) {
-  const githubUrl = `https://api.github.com/repos/yumige18/SZ-YWJ-BEYOND/actions/workflows/${workflow}/dispatches`;
+  const githubUrl = `https://api.github.com/repos/yuntunovo/yyy/actions/workflows/${workflow}/dispatches`;
   try {
     const response = await fetch(githubUrl, {
       method: 'POST',
